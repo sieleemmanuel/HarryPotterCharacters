@@ -1,5 +1,5 @@
 # HarryPotterCharacters
-Android app to show Characters from Harry Potter from the [Harry Potter Public API](https://hp-api.onrender.com/). 
+Android app to show Characters from the [Harry Potter Public API](https://hp-api.onrender.com/). 
 
 # Tech stack & Libraries in use
 - [Kotlin](https://developer.android.com/kotlin) - modern statically typed programming language used to develop android applications. 
