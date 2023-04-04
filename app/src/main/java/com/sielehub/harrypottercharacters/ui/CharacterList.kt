@@ -62,8 +62,7 @@ class CharacterList : Fragment() {
 
             })
                 setOnCloseListener {
-                    this.clearFocus()
-                    root.requestFocus()
+                    svCharacters.clearFocus()
                     return@setOnCloseListener true
                 }
             }

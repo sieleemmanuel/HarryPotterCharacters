@@ -35,7 +35,6 @@ class CharacterDetail : Fragment() {
                 error(R.drawable.ic_broken_image)
             }
             if (character.alternate_names.isNotEmpty()){
-
                 when(character.alternate_names.size){
                     3 ->{
                         tvAltName1.apply {
