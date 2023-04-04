@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.CharacterDetail">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/detailToolbar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="?android:colorBackground"
+        android:minHeight="?attr/actionBarSize"
+        app:title="Character Detail"
+        app:navigationIcon="@drawable/ic_arrow_back"
+        app:navigationIconTint="?attr/colorOnBackground"
+        app:titleTextColor="?attr/colorOnBackground"
+        app:titleTextAppearance="@style/TextAppearance.AppCompat.Headline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/detailToolbar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="30.dp">
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardViewImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                app:cardCornerRadius="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                >
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="250dp"
+                    android:layout_height="250dp"
+                    android:scaleType="fitXY"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:src="@tools:sample/avatars" />
+            </com.google.android.material.card.MaterialCardView>
+
+
+
+            <TextView
+                android:id="@+id/tvAltName1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/rounded_corners_shape"
+                android:hint="Alt Name 1"
+                android:padding="8dp"
+                app:layout_constraintEnd_toStartOf="@+id/tvAltName2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cardViewImage" />
+
+            <TextView
+                android:id="@+id/tvAltName2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="24dp"
+                android:background="@drawable/rounded_corners_shape"
+                android:hint="Alt Name 2"
+                android:padding="8dp"
+                app:layout_constraintEnd_toStartOf="@+id/tvAltName3"
+                app:layout_constraintStart_toEndOf="@+id/tvAltName1"
+                app:layout_constraintTop_toTopOf="@+id/tvAltName1" />
+
+            <TextView
+                android:id="@+id/tvAltName3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:background="@drawable/rounded_corners_shape"
+                android:hint="Alt Name 3"
+                android:padding="8dp"
+                app:layout_constraintStart_toEndOf="@+id/tvAltName2"
+                app:layout_constraintTop_toTopOf="@+id/tvAltName1" />
+
+
+            <TextView
+                android:id="@+id/tvHouseLabel"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="16dp"
+                android:text="House"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvAltName1" />
+
+            <TextView
+                android:id="@+id/tvHouseLabelValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:text="House Value"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/tvHouseLabel"
+                app:layout_constraintTop_toTopOf="@+id/tvHouseLabel" />
+
+            <TextView
+                android:id="@+id/tvGenderLabel"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Gender"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@+id/tvHouseLabel"
+                app:layout_constraintTop_toBottomOf="@+id/tvHouseLabel" />
+
+            <TextView
+                android:id="@+id/tvGenderLabelValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:text="Gender Value"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/tvGenderLabel"
+                app:layout_constraintTop_toTopOf="@+id/tvGenderLabel" />
+
+            <TextView
+                android:id="@+id/tvActorLabel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Actor"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="@+id/tvGenderLabel"
+                app:layout_constraintStart_toStartOf="@+id/tvGenderLabel"
+                app:layout_constraintTop_toBottomOf="@+id/tvGenderLabel" />
+
+            <TextView
+                android:id="@+id/tvActorLabelValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:text="Actor Value"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/tvActorLabel"
+                app:layout_constraintTop_toTopOf="@+id/tvActorLabel" />
+
+            <TextView
+                android:id="@+id/tvAncestryLabel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Ancestry"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="@+id/tvActorLabel"
+                app:layout_constraintStart_toStartOf="@+id/tvActorLabel"
+                app:layout_constraintTop_toBottomOf="@+id/tvActorLabel" />
+
+            <TextView
+                android:id="@+id/tvAncestryLabelValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:text="Ancestry Value"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/tvAncestryLabel"
+                app:layout_constraintTop_toTopOf="@+id/tvAncestryLabel" />
+
+            <TextView
+                android:id="@+id/tvWandLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Wand"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/tvAncestryLabel"
+                app:layout_constraintTop_toBottomOf="@+id/tvAncestryLabel" />
+
+            <TextView
+                android:id="@+id/tvWoodLabel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Wood"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="@+id/tvAncestryLabel"
+                app:layout_constraintStart_toStartOf="@+id/tvWandLabel"
+                app:layout_constraintTop_toBottomOf="@+id/tvWandLabel" />
+
+            <TextView
+                android:id="@+id/tvWoodLabelValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:text="Wood Value"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/tvWoodLabel"
+                app:layout_constraintTop_toTopOf="@+id/tvWoodLabel" />
+
+            <TextView
+                android:id="@+id/tvCoreLabel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Core"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="@+id/tvWoodLabel"
+                app:layout_constraintStart_toStartOf="@+id/tvWoodLabel"
+                app:layout_constraintTop_toBottomOf="@+id/tvWoodLabelValue" />
+
+            <TextView
+                android:id="@+id/tvCoreLabelValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:text="Core Value"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/tvCoreLabel"
+                app:layout_constraintTop_toTopOf="@+id/tvCoreLabel" />
+
+            <TextView
+                android:id="@+id/tvLengthLabel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Length"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="@+id/tvCoreLabel"
+                app:layout_constraintStart_toStartOf="@+id/tvCoreLabel"
+                app:layout_constraintTop_toBottomOf="@+id/tvCoreLabel" />
+
+            <TextView
+                android:id="@+id/tvLengthLabelValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:text="Length Value"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/tvLengthLabel"
+                app:layout_constraintTop_toTopOf="@+id/tvLengthLabel" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

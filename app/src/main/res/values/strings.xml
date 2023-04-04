@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Harry Potter Characters</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="unknown_label">unknown</string>
+    <string name="null_length_value">0.0</string>
+</resources>
